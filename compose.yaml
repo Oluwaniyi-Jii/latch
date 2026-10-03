@@ -1,0 +1,13 @@
+name: latch-db
+
+services:
+  latch:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: latch-server
+    ports:
+      - "6380:6380"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
