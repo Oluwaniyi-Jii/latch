@@ -1,10 +1,10 @@
 # Latch — High-Performance In-Memory Persistent Database
 
-[![Java 21+](https://img.shields.io/badge/Java-21%2B-orange.svg)](https://openjdk.org/projects/jdk/21/)
+[![Java 25+](https://img.shields.io/badge/Java-25%2B-orange.svg)](https://openjdk.org/projects/jdk/25/)
 [![JUnit 5](https://img.shields.io/badge/Testing-JUnit%205-green.svg)](https://junit.org/junit5/)
 [![Docker](https://img.shields.io/badge/Container-Docker-blue.svg)](https://www.docker.com/)
 
-**Latch** is a lightweight, concurrent, persistent, Redis-inspired in-memory key-value database built in **Java 21+**. 
+**Latch** is a lightweight, concurrent, persistent, Redis-inspired in-memory key-value database built in **Java 25+**. 
 
 Built entirely using low-level Java primitives—without relying on Spring Boot or framework magic—Latch demonstrates how production database systems handle **non-blocking I/O (NIO)**, **lock-striped memory storage**, **scalable key expiration min-heaps**, **append-only file persistence**, **optimistic concurrency transactions**, and **latency profiling**.
 
@@ -34,7 +34,7 @@ Built entirely using low-level Java primitives—without relying on Spring Boot 
 - **RESP Protocol Engine**: Full RESP2/RESP3 serializer and buffer parser supporting both raw binary RESP Arrays (`*N\r\n$M\r\n...`) and inline terminal commands (`PING\r\n`, `SET k v\r\n`).
 
 ### 2. Lock-Striped Storage Engine (`com.latch.storage`)
-- **Java 21 Sealed Interfaces & Records**: Strongly typed representation of in-memory values:
+- **Java 25 Sealed Interfaces & Records**: Strongly typed representation of in-memory values:
   ```java
   public sealed interface Value permits StringValue, ListValue, HashValue, SetValue {}
   ```
@@ -71,7 +71,7 @@ Built entirely using low-level Java primitives—without relying on Spring Boot 
 ## Getting Started
 
 ### Prerequisites
-- **Java 21+** (JDK 21 or higher)
+- **Java 25+** (JDK 25 or higher)
 - **Maven 3.9+** (or use included `./mvnw` wrapper)
 
 ### Build & Run Tests
@@ -143,7 +143,7 @@ latch/
 │   ├── server/                   # Java NIO TCP event loop & connection management
 │   ├── protocol/                 # RESP2 protocol encoder and decoder
 │   ├── command/                  # Command handlers & registry
-│   ├── storage/                  # Sharded lock-striped storage engine & Java 21 sealed values
+│   ├── storage/                  # Sharded lock-striped storage engine & sealed values
 │   ├── expiration/               # ExpirationManager with PriorityQueue heap
 │   ├── persistence/              # FileChannel AOF writer & atomic snapshot manager
 │   ├── transaction/              # Transaction control & watched key versioning

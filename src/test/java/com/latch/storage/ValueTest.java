@@ -44,7 +44,7 @@ class ValueTest {
     }
 
     @Test
-    @DisplayName("Verify Java 21 sealed interface pattern matching switch exhaustiveness")
+    @DisplayName("Verify Java 25 sealed interface pattern matching switch exhaustiveness")
     void testSealedPatternMatching() {
         Value val = new StringValue("test");
         String result = switch (val) {
