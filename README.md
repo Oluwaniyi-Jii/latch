@@ -1,6 +1,7 @@
 # Latch — High-Performance In-Memory Persistent Database
 
 [![Java 21+](https://img.shields.io/badge/Java-21%2B-orange.svg)](https://openjdk.org/projects/jdk/21/)
+[![CI](https://github.com/Oluwaniyi-Jii/latch/actions/workflows/ci.yml/badge.svg)](https://github.com/Oluwaniyi-Jii/latch/actions/workflows/ci.yml)
 [![JUnit 5](https://img.shields.io/badge/Testing-JUnit%205-green.svg)](https://junit.org/junit5/)
 [![Docker](https://img.shields.io/badge/Container-Docker-blue.svg)](https://www.docker.com/)
 
